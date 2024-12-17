@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Website</title>
+    <!-- Linking a CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Website Header -->
+    <header>
+        <h1>S1N ON TOP </h1>
+        <nav>
+            <ul>
+                
+                
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <section id="home">
+          
+            <img src="c:\Users\Administrator\Pictures\5d9bd8f2-4d55-44d9-adc3-0fe2bd73a84f.jpg" alt="Sample Image" width="500">
+        </section>
+
+        <section id="about">
+            <h2></h2>
+            <p>DUMUDUROG NG MGA SINTO SINTO SA ONLINE GAGO TANGA SINTO SINTO ABNORMAL GAGO<h2>
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Facebook Login</title>
+                    <!-- Facebook SDK Script -->
+                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+                </head>
+                <body>
+                    <h1>Login with Facebook</h1>
+                
+                    <!-- Facebook Login Button -->
+                    <fb:login-button 
+                        scope="public_profile,email" 
+                        onlogin="checkLoginState();">
+                    </fb:login-button>
+                
+                    <!-- Display logged-in user's info -->
+                    <div id="status"></div>
+                
+                    <script>
+                        // Initialize the Facebook SDK
+                        window.fbAsyncInit = function() {
+                            FB.init({
+                                appId      : 'YOUR_APP_ID',  // Replace with your Facebook App ID
+                                cookie     : true,
+                                xfbml      : true,
+                                version    : 'v16.0'
+                            });
+                
+                            FB.AppEvents.logPageView();
+                        };
+                
+                        // Check login state
+                        function checkLoginState() {
+                            FB.getLoginStatus(function(response) {
+                                statusChangeCallback(response);
+                            });
+                        }
+                
+                        // Handle the login status response
+                        function statusChangeCallback(response) {
+                            if (response.status === 'connected') {
+                                console.log('Logged in and authenticated');
+                                fetchUserData();
+                            } else {
+                                document.getElementById('status').innerHTML = 'Please log in with Facebook.';
+                            }
+                        }
+                
+                        // Fetch user information from Facebook API
+                        function fetchUserData() {
+                            FB.api('/me', {fields: 'name,email'}, function(response) {
+                                document.getElementById('status').innerHTML = 'Hello, ' + response.name + '! Email: ' + response.email;
+                            });
+                        }
+                    </script>
+                </body>
+                </html>
+                <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Website Name</title> <!-- Change this to your new website name -->
+</head>
+<body>
+    <h1>S1N members</h1>
+   
+</body>
+</html>
